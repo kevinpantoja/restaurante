@@ -38,3 +38,10 @@ const footer__estado__control = (e)=>{
 }
 window.addEventListener("resize",footer__estado__control);
 window.addEventListener("load",footer__estado__control);
+
+
+/*CAMBIAMOS EL BACKGROUND DEL NAV AL HACER SCROLL*/
+window.addEventListener("scroll",()=>{
+	let element = document.querySelector(".header-nav");
+	element.classList.toggle("change-nav",window.scrollY>700);
+});
