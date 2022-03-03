@@ -19,15 +19,14 @@
             </div>
             <div class="nav-container container-medium">
                 <a class="container-medium__anclaje" href="#">
-                    <!-- <img class="container-medium__img" src="" alt=""> -->
                     <i class="fas fa-dolly-flatbed fa-2x container-medium__logo"></i>
                 </a>
             </div>
             <div class="nav-container container-right">
                 <ul class="container-right-list">                  
                     <li class="container-right__item"> <a href="#">Locales</a></li>
-                    <li class="container-right__item"> <a href="#">Nosotros</a></li>
-                    <li class="container-right__item"> <a href="#">Contacto</a></li>    
+                    <li class="container-right__item"> <a href="#nosotros">Nosotros</a></li>
+                    <li class="container-right__item"> <a href="#contacto">Contacto</a></li>    
                 </ul>
             </div>
         </nav>
@@ -81,16 +80,50 @@
             <di class=""></di>
             <di class=""></di>
         </section>
-        
-        <section class="rectangulo">
 
+        <!--seccion informacion-->
+        <section class="nosotros" id="nosotros">
+            <h1 class="contacto__titulo">Nosostros</h1>
+            <img src="img/restaurante__logo2.png" class="nosotros__img" alt="logo_restaurante">
+            <div class="nosotros__informacion">
+                <h2 class="nosotros__titulo">Nuestra Historia</h2>
+                <p class="nosotros__texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa assumenda magni omnis, doloremque reprehenderit sequi illum nam nostrum cupiditate. Delectus deserunt aliquam dignissimos maiores facilis, dolores optio quod veritatis rerum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eum, voluptatibus blanditiis in labore odio dolorem nesciunt consequatur tempore quam ut numquam aliquam quod minus porro possimus consectetur ipsam ad!
+                </p>
+            </div>
         </section>
+
+        <!--seccion de contacto-->
+        <section class="contacto" id="contacto">
+            <h1 class="contacto__titulo">Contacto</h1>
+            <div class="contacto__informacion">
+                <p class="contacto__registro"><span class="contacto__subtitulo">Empresa : </span>restaurante criollo´s</p>
+                <p class="contacto__registro"><span class="contacto__subtitulo">Email : </span><a href="">criollos@restobar.com</a></p>
+                <p class="contacto__registro"><span class="contacto__subtitulo">Celular : </span>987654321</p>
+                <p class="contacto__registro"><span class="contacto__subtitulo">Telefono : </span>(01)87654321</p>
+                <p class="contacto__registro"><span class="contacto__subtitulo">RUC : </span>12345678932</p>
+            </div>
+            <form action="" class="contacto__formulario">
+                <div class="__100">
+                    <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre o Razón social"/><label for="" class="formulario__indicaciones">Nombre o Razón social</label>    
+                </div>
+                <div class="__50">
+                    <input class="formulario__input" type="email" name="correo" id="correo" placeholder="Correo"><label for="" class="formulario__indicaciones">Correo</label>    
+                </div>
+                <div class="__50">
+                    <input class="formulario__input" type="text" name="celular" id="celular" placeholder="Celular"><label for="" class="formulario__indicaciones">Celular</label>    
+                </div>
+                <div class="__100">
+                    <textarea class="formulario__input" wrap="soft" rows="6" name="sugerencia" id="sugerencia" placeholder="Reserva, queja o sugerencia"></textarea><label for="" class="formulario__indicaciones">Reserva, queja o sugerencia</label>    
+                </div>
+                <input type="submit" value="enviar" class="contacto__enviar">
+            </form>
+        </section>
+
         <section class="whatsapp">
             <a target="_blank" href="https://api.whatsapp.com/send?phone=5112198000&text="><img class="whatsapp__logo"src="img/whatsapp.png"></img></a>
         </section>
     </main>
-
-
   
     <footer>
         <div class="footer__elemento">
@@ -134,7 +167,6 @@
     
     <script src="https://kit.fontawesome.com/42778bfa5e.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9e7e6d804a.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/42778bfa5e.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
