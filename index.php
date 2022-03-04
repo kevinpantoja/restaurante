@@ -8,6 +8,19 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
+        include "php/registro.php";
+        if(isset($_POST["nombre"])){
+            $db = new Registro();
+            $db->setNombre($_POST["nombre"]);
+            $db->setCorreo($_POST["correo"]);
+            $db->setSugerencia($_POST["sugerencia"]);
+            if(isset($_POST["celular"])){
+                $db->setCelular($_POST["celular"]);
+            }
+            $db->registrar();
+        }
+    ?>
     <header class="header">
         <nav class="header-nav">
             <div class="nav-container container-left">
@@ -103,18 +116,18 @@
                 <p class="contacto__registro"><span class="contacto__subtitulo">Telefono : </span>(01)87654321</p>
                 <p class="contacto__registro"><span class="contacto__subtitulo">RUC : </span>12345678932</p>
             </div>
-            <form action="" class="contacto__formulario">
+            <form action="#" method="POST" class="contacto__formulario" id="formulario">
                 <div class="__100">
-                    <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre o Razón social"/><label for="" class="formulario__indicaciones">Nombre o Razón social</label>    
+                    <input class="formulario__input" required type="text" name="nombre" id="nombre" placeholder="Nombre o Razón social"/><label for="" class="formulario__indicaciones">Nombre o Razón social</label>    
                 </div>
                 <div class="__50">
-                    <input class="formulario__input" type="email" name="correo" id="correo" placeholder="Correo"><label for="" class="formulario__indicaciones">Correo</label>    
+                    <input class="formulario__input" required type="email" name="correo" id="correo" placeholder="Correo"><label for="" class="formulario__indicaciones">Correo</label>    
                 </div>
                 <div class="__50">
                     <input class="formulario__input" type="text" name="celular" id="celular" placeholder="Celular"><label for="" class="formulario__indicaciones">Celular</label>    
                 </div>
                 <div class="__100">
-                    <textarea class="formulario__input" wrap="soft" rows="6" name="sugerencia" id="sugerencia" placeholder="Reserva, queja o sugerencia"></textarea><label for="" class="formulario__indicaciones">Reserva, queja o sugerencia</label>    
+                    <textarea class="formulario__input" required wrap="soft" rows="6" name="sugerencia" id="sugerencia" placeholder="Reserva, queja o sugerencia"></textarea><label for="" class="formulario__indicaciones">Reserva, queja o sugerencia</label>    
                 </div>
                 <input type="submit" value="enviar" class="contacto__enviar">
             </form>

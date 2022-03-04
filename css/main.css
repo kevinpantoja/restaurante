@@ -262,8 +262,8 @@ main {
 }
 .formulario__input:focus{
   font-size: .6rem;
-  line-height: 2rem;
-  padding: .4rem .5rem 0rem;
+  /* line-height: 2rem; */
+  padding: 1rem .5rem 0rem;
 }
 .contacto__formulario > div{
   position: relative;
@@ -273,6 +273,9 @@ main {
 }
 .__50{
   width: calc(50% - .3rem);
+}
+.formulario__input{
+  text-transform: none;
 }
 .formulario__input:focus + .formulario__indicaciones{
   display: block;
