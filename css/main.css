@@ -1,3 +1,5 @@
+/* sass sass/main.scss ./css/main.css --watch */
+
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Ubuntu&display=swap');
 /* @charset "UTF-8"; */
 /*Formato CSS*/
@@ -23,7 +25,7 @@ html{
 }
 
 body {
-  background-color: #e2e1e1;
+  background-color: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
   /* height: 100vh; */
 }
@@ -45,7 +47,7 @@ body {
   position: fixed;
   display: flex;
   height: 3.5rem;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
   background-image: linear-gradient(to top, transparent 0%, transparent 50%, black 85%);
   line-height: auto;
@@ -65,16 +67,16 @@ body {
 .header .header-nav .container-left .container-left-list {
   margin-left: 8%;
 }
-.header .header-nav .container-medium a {
+.container-medium a {
   display: inherit;
   align-items: center;
   height: 100%;
   color: white;
 }
-.header .header-nav .container-right {
+ .container-right {
   justify-content: flex-end;
 }
-.header .header-nav .container-right .container-right-list {
+.container-right-list {
   margin-right: 8%;
 }
 .header .change-nav {
@@ -98,7 +100,7 @@ ul li a {
   font-size: 16px;
 }
 ul li a:hover {
-  background-color: black;
+  background-color: rgb(7, 7, 7);
   color: white;
   border-radius: 1px;
   padding: 20px 10px;
@@ -110,64 +112,108 @@ ul li a:hover {
   box-shadow: 0 2px 10px 0 #f6df11;
 }
 
-main {
-  /* height: 1200px; */
+.header__fondo{
+  height: 100%;
+  width: 100%;
+}
+.header__fondo img{
+  height: 100%;
+  width: 100%;
+}
+
+
+main{
+  width: 100%;
 }
 
 .section-productos {
-  width: 70%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  
 }
-.section-productos .container-products {
-  margin: 10px 20px;
+ .container-products {
+  margin: 20px 0;
   display: grid;
   text-align: center;
-  grid-template-columns: 35% 35% 35% 35%;
-  grid-template-rows: 40% 40%;
-  grid-gap: 10px;
+  grid-template-columns: repeat(4,24.8%);
+  grid-template-rows: repeat(2,65%);
+  grid-gap: 5px;
 }
-.section-productos .container-products .container-product {
+.container-product {
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 0.8rem;
   font-size: 2rem;
 }
-.section-productos .container-products .container-product .container__img {
+.container__img {
   height: 100%;
   width: 100%;
+ 
+  object-fit: cover;
 }
-.section-productos .container-products .container-product .container__name {
+.container__img:hover{
+  padding: 3px;
+}
+.container__name {
   font-size: 20px;
 }
-.section-productos .container-products .container-product .container__description {
+ .container__description {
   font-size: 10px;
 }
-.section-productos .container-products .container-product:first-child,
-.section-productos .container-products .container-product:nth-child(2) {
-  background: #db0d0d;
+.container-product:first-child,
+ .container-product:nth-child(2) {
+  background: black;
+  color: white;
 }
-.section-productos .container-products .container-product:nth-child(3),
-.section-productos .container-products .container-product:nth-child(4) {
-  background: #cccf14;
+ .container-product:nth-child(3),
+ .container-product:nth-child(4) {
+  background: #858584;
 }
-.section-productos .container-products .container-product:nth-child(5),
-.section-productos .container-products .container-product:nth-child(6) {
-  background: #71b31b;
+ .container-product:nth-child(5),
+.container-product:nth-child(6) {
+  background: #3b4430;
+  color: white;
 }
-.section-productos .container-products .container-product:first-child {
+.container-product:first-child {
   grid-column: 1/3;
   grid-row: 1;
 }
-.section-productos .container-products .container-product:nth-child(2) {
+.container-product:nth-child(2) {
   grid-column: 3/4;
   grid-row: span 2;
 }
+
+
+.section-locales{
+  margin-top: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-locales__title{
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+.container-local{
+  background-color: rgba(155, 146, 146, 0.863);
+  margin-bottom: 10px;
+}
+.container__site{
+  font-style: italic;
+}
+.container__map{
+  padding: 10px;
+}
+
+
+
 
 .rectangulo{
     width: 100%;
@@ -214,8 +260,6 @@ main {
   width: 30%;
   min-width: 300px;
 }
-
-
 
 
 

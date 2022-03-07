@@ -41,9 +41,10 @@ window.addEventListener("load",footer__estado__control);
 
 
 /*CAMBIAMOS EL BACKGROUND DEL NAV AL HACER SCROLL*/
+let tamanioFondo=document.querySelector(".header__fondo");
 window.addEventListener("scroll",()=>{
 	let element = document.querySelector(".header-nav");
-	element.classList.toggle("change-nav",window.scrollY>700);
+	element.classList.toggle("change-nav", window.scrollY>tamanioFondo.clientHeight);
 });
 
 

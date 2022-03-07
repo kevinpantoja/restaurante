@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main-.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,11 +21,13 @@
             $db->registrar();
         }
     ?>
+
+    <!--header-->
     <header class="header">
         <nav class="header-nav">
             <div class="nav-container container-left">
                 <ul class="container-left-list">    
-                    <li class="container-left__item"> <a href="#">PLatos</a></li>
+                    <li class="container-left__item"> <a href="#platos">PLatos</a></li>
                     <li class="container-left__item"> <a href="#">Menu</a></li>
                     <li class="container-left__item"> <a href="#">Promociones</a></li>
                 </ul>
@@ -37,20 +39,21 @@
             </div>
             <div class="nav-container container-right">
                 <ul class="container-right-list">                  
-                    <li class="container-right__item"> <a href="#">Locales</a></li>
+                    <li class="container-right__item"> <a href="#locales">Locales</a></li>
                     <li class="container-right__item"> <a href="#nosotros">Nosotros</a></li>
                     <li class="container-right__item"> <a href="#contacto">Contacto</a></li>    
                 </ul>
             </div>
         </nav>
-
-        <div>
-            <img style="width:100vw; height:100vh;" src="https://static.guiarepsol.com/gr-cms/media/filer_public/cc/ec/ccecba57-fc3a-4b94-911a-966ab4265c40/1.jpg" width="90%" alt="">
+        
+        <div class="header__fondo">
+            <img class="header__fondo-img" src="https://static.guiarepsol.com/gr-cms/media/filer_public/cc/ec/ccecba57-fc3a-4b94-911a-966ab4265c40/1.jpg" alt="">
         </div>
     </header>
 
     <main>
-        <section class="section-productos">
+        <!--seccion de productos-->
+        <section id="platos" class="section-productos">
             <div class="container-products">
                 <di class="container-product">
                     <img class="container__img" src="https://static.emol.cl/emol50/Fotos/2016/06/24/file_20160624110902.jpg" alt="">
@@ -85,14 +88,29 @@
             </div>
         </section>
         
-        <section class="section-services">
+        <!--seccion de servicios-->
+        <!-- <section class="section-services">
             <di class=""></di>
             <di class=""></di>
             <di class=""></di>
             <di class=""></di>
             <di class=""></di>
             <di class=""></di>
+        </section> -->
+
+        <!--seccion de locales-->
+        <section id="locales" class="section-locales">
+            <h2 class="section-locales__title">NOS UBICAMOS</h2>
+            <div class="container-local">
+                <h2 class="container__site">CHOSICA</h2>
+                <iframe class="container__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249744.1355303729!2d-77.05386843322117!3d-12.026156400893967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf5808455e63%3A0xe8ac9d2aa5159a96!2sPardos%20Chicken!5e0!3m2!1sen!2spe!4v1646598737404!5m2!1sen!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="container-local">
+                <h2 class="container__site">LA MOLINA </h2>
+                <iframe class="container__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15606.545336942445!2d-76.9489191!3d-12.068524!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x47056ab7aba2c506!2sPardos%20Chicken!5e0!3m2!1sen!2spe!4v1646599183852!5m2!1sen!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </section>
+
 
         <!--seccion informacion-->
         <section class="nosotros" id="nosotros">
